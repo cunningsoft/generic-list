@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<phpunit
+    bootstrap="./vendor/autoload.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    verbose="true"
+    stopOnFailure="false"
+    processIsolation="false"
+    backupGlobals="false"
+>
+    <testsuite name="all">
+        <directory>tests</directory>
+    </testsuite>
+
+    <filter>
+        <whitelist>
+            <directory>src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

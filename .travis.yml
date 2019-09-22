@@ -1,0 +1,35 @@
+dist: trusty
+sudo: false
+language: php
+
+php:
+  - 7.3
+  - 7.4snapshot
+
+before_install:
+  - travis_retry composer self-update
+
+install:
+  - composer install
+
+jobs:
+  include:
+    - stage: Test
+      script:
+        - ./vendor/bin/phpunit
+
+    - stage: Code Quality
+      script:
+        - ./vendor/bin/phpcs
+
+    - stage: Code Quality
+      script:
+        - ./vendor/bin/phpstan analyze
+
+    - stage: Code Quality
+      script:
+        - ./vendor/bin/infection --min-msi=99
+
+cache:
+  directories:
+    - $HOME/.composer/cache
