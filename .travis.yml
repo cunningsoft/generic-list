@@ -14,19 +14,18 @@ install:
 
 jobs:
   include:
-    - stage: Test
-      script:
-        - ./vendor/bin/phpunit
-
     - stage: Code Quality
+      env: phpcs
       script:
         - ./vendor/bin/phpcs
 
     - stage: Code Quality
+      env: phpstan
       script:
         - ./vendor/bin/phpstan analyze
 
     - stage: Code Quality
+      env: infection
       script:
         - ./vendor/bin/infection --min-msi=99
 
