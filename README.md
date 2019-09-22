@@ -4,7 +4,8 @@ This library provides the tools needed to create custom iterables without the ne
 
 [![Minimum PHP version: 7.2.9](https://img.shields.io/badge/php-7.3%2B-blue.svg)](https://packagist.org/packages/cunningsoft/generic-list)
 [![Build Status](https://travis-ci.org/cunningsoft/generic-list.svg?branch=master)](https://travis-ci.org/cunningsoft/generic-list)
-[![Infection MSI](https://badge.stryker-mutator.io/github.com/cunningsoft/generic-list/master)](https://github.com/cunningsoft/generic-list)
+[![Code Coverage](https://scrutinizer-ci.com/g/cunningsoft/generic-list/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/cunningsoft/generic-list/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cunningsoft/generic-list/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cunningsoft/generic-list/?branch=master)
 
 ## Installation
 
