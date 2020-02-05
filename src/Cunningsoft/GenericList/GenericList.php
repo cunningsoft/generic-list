@@ -18,15 +18,29 @@ use function gettype;
 use function is_object;
 use function sprintf;
 
+/**
+ * @psalm-template T
+ */
 abstract class GenericList implements IteratorAggregate
 {
-    /** @var string */
+    /**
+     * @var string
+     * @psalm-var class-string<T>
+     */
     private $type;
 
-    /** @var mixed[] */
+    /**
+     * @var mixed[]
+     * @psalm-var T[]
+     */
     protected $elements = [];
 
-    /** @param mixed[] $elements */
+    /**
+     * @param mixed[] $elements
+     *
+     * @psalm-param class-string<T> $type
+     * @psalm-param iterable<T> $elements
+     */
     public function __construct(string $type, iterable $elements = [])
     {
         $this->type = $type;
@@ -83,7 +97,11 @@ abstract class GenericList implements IteratorAggregate
         return new static($this->type, array_slice($this->elements, $offset, $length));
     }
 
-    /** @return mixed */
+    /**
+     * @return mixed
+     *
+     * @psalm-return T
+     */
     public function only()
     {
         if ($this->isEmpty()) {
