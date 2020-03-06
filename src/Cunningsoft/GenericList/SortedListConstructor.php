@@ -9,7 +9,7 @@ trait SortedListConstructor
     /** @var SortedGenericList */
     private $list;
 
-    /** @param mixed[] $elements */
+    /** @param iterable<mixed> $elements */
     public function __construct(iterable $elements = [])
     {
         $this->list = new SortedGenericList($this->getElementType(), $elements);

@@ -9,7 +9,7 @@ trait UnsortedListConstructor
     /** @var UnsortedGenericList */
     private $list;
 
-    /** @param mixed[] $elements */
+    /** @param iterable<mixed> $elements */
     public function __construct(iterable $elements = [])
     {
         $this->list = new UnsortedGenericList($this->getElementType(), $elements);
